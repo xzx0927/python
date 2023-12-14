@@ -1,0 +1,3 @@
+这是前端和后端分离（django）
+pythion 需要导包django，mysqlclient
+还需要mysql或者自带
