@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的页面</title>
+</head>
+<body>
+<div>
+{% for a ,b in he.items %}
+    {{ a }}
+    {% for book in b %} #遍历
+        <a href="/book_detail/{{ book.id }}">{{ book.name }}<br/></a>
+    {% endfor %}
+{% endfor %}
+{#{% for book in books %} #遍历#}
+{#        <a href="/book_detail/{{ book.id }}">{{ book.name }}<br/></a>#}
+{#{% endfor %}#}
+</div>
+</body>
+</html>
