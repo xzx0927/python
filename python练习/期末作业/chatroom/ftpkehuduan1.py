@@ -11,8 +11,7 @@ def handler_jie():
 
 
 def handler_hui():
-    while True:
-        print(c.recv(1024).decode('utf-8'))
+    print(c.recv(1024).decode('utf-8'))
 
 
 c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
