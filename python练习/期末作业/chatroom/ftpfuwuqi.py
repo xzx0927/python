@@ -65,6 +65,6 @@ while True:
         x = str(bt).strip('~')
         _conn.send(('系统消息:' + x + '进入聊天室').encode('utf-8'))
     print(user_list)
-    time.sleep(1)
+    time.sleep(0.5)
     tp = threading.Thread(target=he, args=(conn, bt,))
     tp.start()

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的页面</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<div>
+<table class="table table-striped">
+    <tr>
+        <td class="active">商品名称</td>
+        <td class="active">商品地点</td>
+        <td class="active">商品图片</td>
+        <td class="active">商品价格</td>
+        <td class="active">商品数量</td>
+
+    </tr>
+ {% for a  in sop%}
+     <tr>
+         <td class="active" name="name">{{ a.name }}</td>
+         <td name="place_">{{ a.place }}</td>
+         <td><img height="30"  src="/medias/{{ a.msg }}"/></td>
+         <td class="active"> {{ a.price }}</td>
+         <td class="active">{{ a.residual_quantity }}</td>
+         <td class="active"><a href="/goumai/?name={{ a.name }}&place={{ a.place }}">购买</a></td>
+     </tr>
+{% endfor %}  
+</table>
+</div>
+</body>
+</html>

@@ -127,6 +127,4 @@ def lonig_run():  # 创建登录窗口
     Button(root, text='登录', command=login).place(x=80, y=110)
     Button(root, text='注册', command=register).place(x=180, y=110)
     root.mainloop()
-
-
 lonig_run()

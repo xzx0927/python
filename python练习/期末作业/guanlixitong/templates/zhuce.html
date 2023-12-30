@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+    <style>
+      body { 
+          font-family: Arial,sans-serif; 
+      }
+      .container { 
+          max-width: 300px;
+          margin: 50px auto; 
+          text-align: center;
+      }
+      form { 
+          margin-top: 20px;
+      }
+      input[type="text"], input[type="password"] { 
+          width: 100%;
+          padding: 10px; 
+          margin: 10px 0;
+      }
+      input[type="submit"] { 
+          background: #4CAF50; 
+          color: white; 
+          padding: 10px 15px;
+          border: none; 
+          border-radius: 5px; 
+          cursor: pointer; 
+      }
+      input[type="submit"]:hover {
+          opacity: 0.8;
+      }
+      .register { 
+          margin-top: 20px;
+      }
+    </style>
+    
+{#<script type="text/javascript">#}
+{#	function checkyzm(){#}
+{#		var code = document.getElementsByName("vcode")[0].value;#}
+{#		var re = new XMLHttpRequest();#}
+{#		re.open("POST", "yzm?code="+code,true);#}
+{#		re.onreadystatechange = function(){#}
+{#			if(re.readyState==4){#}
+{#				var tipsEle = document.getElementById("tips");#}
+{#				if(re.responseText=="fail"){#}
+{#					tipsEle.innerHTML = "验证码不正确"; #}
+{#					tipsEle.style.color="red";#}
+{#				}	#}
+{#				else{#}
+{#					tipsEle.innerHTML = "验证码正确"; #}
+{#					tipsEle.style.color="green";#}
+{#				}#}
+{#			}#}
+{#		}#}
+{#		re.send();	#}
+{#	}#}
+{#	#}
+{#	function changeVCode(img){#}
+{#		img.src = "yzm?xxxx="+ Math.random();#}
+{#	}#}
+{#</script>#}
+</head>
+<body>
+<div class="container">
+  <h2>register</h2>
+  <form id="loginForm" action='zuce/' method="get">
+      <label>
+          <input type="text" id="username" placeholder="Username" name="username">
+{#        <span id="xianshi"></span>#}  
+          <input type="password" id="password" placeholder="Password" name="password">
+          <select name="place_">
+                  {% for i in detailed %}
+                      <option value="{{ i.place_name }}">{{ i.place_name }}</option>
+                  {% endfor %}
+          </select>
+      </label>
+      <input type="submit" value="register">
+  </form>
+</div>
+</body>
+</html>
